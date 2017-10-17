@@ -1,0 +1,52 @@
+pre {
+    word-wrap: break-word;
+}
+
+.pre_error {
+    color: red;
+    width: 100%;
+}
+
+.space_ {
+    width: 20px;
+    display: inline-block;
+}
+
+.panel-group .panel + .panel {
+    margin-top: 20px;
+}
+
+.panel-body b {
+    min-width: 80px;
+    text-align: right;
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+.no_use {
+    background: #ccc;
+    color: #fff;
+}
+
+.table font, #param_div font {
+    color: red;
+    width: 10px;
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    margin-left: -10px;
+    padding-right: 2px;
+}
+
+sup {
+    color: red;
+    position: relative;
+    margin-left: -28px;
+    right: -4px;
+}
+
+ol > li > sup {
+    color: red;
+    margin-left: -45px;
+    margin-right: 20px;
+}

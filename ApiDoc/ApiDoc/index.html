@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>Api文档说明</title>
+
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="js/plugins/layer/skin/default/layer.css" rel="stylesheet" />
+    <link href="css/self_css.css" rel="stylesheet">
+    <style>
+        sup {
+            color: red;
+            margin-left: -31px;
+            margin-right: 5px;
+        }
+
+        .nav > li > .search_result {
+            color: red;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow: hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close">
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <!--每个li 的块表示一个分类菜单.其中双括号的 Home 表示控制器名称,根据li的个数,和Home对应的控制器,生成首页左侧菜单 -->
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-label">Home相关</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="Home_GetName.html"  data-index="0">获取姓名</a><a class="J_menuItem" href="Home_GetName2.html"  data-index="1">获取姓名2</a><a class="J_menuItem" href="Home_GetName3.html"  data-index="2">获取姓名3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-label">User相关</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="User_GetUser.html"  data-index="0">用户相关</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
+                        <div class="form-group navbar-form-custom" style="width: 260px;">
+                            <input type="text" id="top-search" placeholder="请输入方法名..." class="form-control" style="border-bottom: 1px solid red; height: auto; margin-top: 14px;">
+                        </div>
+                        <button id="search" class="btn btn-primary" style="padding: 4px 12px; margin: 14px 5px 5px 20px;">搜索</button>
+                    </div>
+
+                </nav>
+            </div>
+            <div class="row content-tabs">
+
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="Home_GetName.html">获取姓名</a>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="Home_GetName.html?v=4.0" frameborder="0" data-id="Home_GetName.html" seamless></iframe>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <a href="javascript:layer.alert('<b>接口内测地址:</b>http://192.168.1.189:7405<br/><h3>密钥/签名方法请在项目群内询问</h3>',{title:'Api文档说明提示:'});" target="_blank">Api文档说明</a>
+                </div>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+
+        <!--模拟请求弹窗-->
+        <div class="row request_example">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title" id="mnqq">
+                    <h5 class="panel-title" style="width: 100%;">
+                        <a href="javascript:void(0);">【模拟请求】<span style="color: red; font-size: 11px;">*<!--【点击显示/隐藏】-->【双击关闭窗口】</span></a>
+                    </h5>
+                    <button class="btn btn-success" id="request_api" style="float: right; margin-bottom: 0px; height: auto; position: relative; top: 5px; margin-top: -31px;">提交请求</button>
+                </div>
+                <div class="ibox-content mnqq_body" style="margin-top: 45px;">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-collapse collapse in ">
+                                <div class="panel-body ">
+                                    <b>请求方式：</b>
+                                    <select id="slt_Methods">
+                                        <option value="0">Get/Post</option>
+                                        <option value="1">Get</option>
+                                        <option value="2">Post</option>
+                                    </select>
+                                    <br>
+                                    <b>请求地址：</b>
+                                    <textarea placeholder="输入请求地址..." id="txt_ApiUrl1" disabled="disabled">http://localhost:10001</textarea>
+                                    <br>
+                                    <b>请求方法：</b>
+                                    <textarea id="txt_ApiUrl" placeholder="输入请求地址..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="javascript:void(0);">请求参数(*为必填项)：</a>
+                                </h4>
+                            </div>
+                            <div class="panel-collapse collapse in ">
+                                <div class="panel-body">
+                                    <form id="param_div">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="javascript:void(0);">返回结果：</a>
+                                </h4>
+                            </div>
+                            <div class="panel-collapse collapse in ">
+                                <div class="panel-body " id="result_div">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #mnqq {
+            position: fixed;
+            top: 112px;
+            right: 191px;
+            width: 594px;
+            padding: 15px 20px 20px;
+        }
+
+        .request_example {
+            display: none;
+            position: fixed;
+            top: 112px;
+            right: 200px;
+            width: 600px;
+            height: 550px;
+            overflow: scroll;
+            margin-bottom: 0px;
+        }
+
+        .panel-body input, .panel-body select, .panel-body textarea {
+            width: 400px;
+            border: 1px solid #eee;
+            padding: 3px;
+            border-radius: 5px;
+            margin: 5px 0px;
+        }
+
+        .panel-body b {
+            vertical-align: top;
+            margin: 5px 0px;
+        }
+
+        .panel-body textarea {
+            height: 50px;
+        }
+
+        .panel-body .block + .block {
+            border-bottom: 1px solid #efefef;
+        }
+
+        #result_div ul li {
+            list-style: none;
+        }
+    </style>
+
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.js"></script>
+    <script src="js/hplus.min.js?v=4.0.0"></script>
+    <script type="text/javascript" src="js/contabs.min.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/jquery.json-viewer.js?v=1.0.0"></script>
+    <script>
+        $(function () {
+            $("body").on("click", ".J_menuTab", function () {
+                $(".request_example").hide();
+            })
+            $(".J_menuItem").on("click", function () {
+                $(".request_example").hide();
+            })
+            //$("#mnqq").click(function () {
+            //    $(".mnqq_body").toggle(800);
+            //})
+            $("#mnqq").dblclick(function () {
+                $(".request_example").slideUp(600);
+            })
+
+            $("#request_api").click(function () {
+                var isRequest = true;
+                $("#param_div font").each(function () {
+                    var val = $(this).parent().next().val();
+                    if (val == null || val.length <= 0) {
+                        layer.msg("请填写必填项!");
+                        isRequest = false;
+                        return;
+                    }
+                })
+                if (!isRequest)
+                    return;
+                var str = $("#param_div").serialize();
+                var methodsNum = parseInt($("#slt_Methods").val() || 0);
+                var url = $("#txt_ApiUrl1").text() + $("#txt_ApiUrl").text();
+                $.ajax({
+                    type: "Get",
+                    url: "/Home/TestApiRequest",
+                    data: { "paramStr": str, "apiUrl": url, "methods": methodsNum },
+                    dataType: "Json",
+                    success: function (result) {
+                        if (result.Status == 200) {
+                            layer.msg("请求成功!");
+                            var json = result.Data;
+                            $("#result_div").jsonViewer(eval('(' + json + ')'), {
+                                withQuotes: true,
+                            });
+                        } else {
+                            layer.msg(result.Message);
+                        }
+
+                    }
+                })
+            })
+
+            $("#search").click(function () {
+                var val = $("#top-search").val();
+                if (val.length <= 0)
+                    return;
+                else {
+                    var $result = $(".J_menuItem[href*='" + val + "']");
+                    if ($result.length == 0) {
+                        layer.msg("未搜索到结果!");
+                    } else if ($result.length > 1) {
+                        layer.msg("搜索到多个结果,请精确查询条件");
+                    } else {
+                        var className = $result.parent().parent().parent().attr("class") || "";
+                        if ($result.parent().parent().parent().attr("class").length <= 0)
+                            $result.parent().parent().parent().find("a").first().trigger("click");
+                        $result.addClass("search_result");
+                        layer.msg("查询到结果(3秒后取消颜色加深)！");
+                        setTimeout(function () {
+                            $result.removeClass("search_result");
+                        }, 3000);
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

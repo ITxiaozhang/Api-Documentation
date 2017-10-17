@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>用户相关-【GetUser】</title>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/self_css.css" rel="stylesheet">
+    <link href="css/style.min.css?v=4.0.0" rel="stylesheet">
+    <base target="_blank">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+
+        <div class="panel panel-default status_code" style="position: fixed; top: 1%; right: 0px; width: 180px; z-index: 999;">
+            <div class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <h5 class="panel-title">
+                        <a href="javascript:void(0);">【快速导航】</a>
+                    </h5>
+                    <ol style="margin-top: 10px;">
+                        <li><a href="#api_Url" target="_self">接口地址</a></li>
+                        <li><a href="#api_Params" target="_self">传入参数说明</a></li>
+                        <li><a href="#api_BackSuccess" target="_self">返回示例</a></li>
+                        <li><a href="#api_BackParams" target="_self">返回参数说明</a></li>
+                    </ol>
+
+                    <h5 class="panel-title">
+                        <a href="javascript:void(0);">【状态码含义（Stata）】</a>
+                    </h5>
+                    <br>
+                    <span class="space_"></span>请求错误 = 400,<br>
+                    <span class="space_"></span>服务端错误 = 500,<br>
+                    <span class="space_"></span>登录过期 = 499,<br>
+                    <span class="space_"></span>成功 = 200<br>
+
+                    <a href="javascript:void(0);" class="btn btn-success" onclick="CreateFile('/User/GetUser')">重新生成文件</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5 class="Name">【用户相关】Api</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default" id="api_Url">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">【接口地址】</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <b>请求方式：</b><s class="Methods">Get</s><br>
+                                        <b>接口地址：</b><span style="font-size: 15px;" class="ApiUrl">/User/GetUser</span>
+                                        <br>
+                                        <b>说明：</b><s class="Describtion">我是获取用户相关的详细的说明...</s>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default" id="api_Params">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a href="javascript:void(0);">【传入参数说明】</a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th width="80">参数名</th>
+                                                <th width="50">类型</th>
+                                                <th width="80">长度/限制</th>
+                                                <th width="180">说明</th>
+                                            </thead>
+                                            <tbody class="ParamDataList">
+                                                <tr>
+                                            <td><font>*</font>Name</td>
+                                            <td>string</td>
+                                            <td>(必填)</td>
+                                            <td>姓名</td>
+                                        </tr><tr>
+                                            <td>Age</td>
+                                            <td>int</td>
+                                            <td></td>
+                                            <td>年龄</td>
+                                        </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default" id="api_BackSuccess">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">【返回示例】</a>
+                                        <a href="javascript:void(0);" id="request_mn" style="color: red; border-bottom: 1px solid red;">请求模拟</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <b>成功返回示例：</b>
+                                        <pre class="pre_success BackSuccess">
+{"Stata":"200","Message":"ok","Data":{"Name":"","FiledType":"","IsWrite":"","Remark":""}}
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" id="api_BackParams">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a href="javascript:void(0);">【返回参数说明】</a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th width="80">参数名</th>
+                                                <th width="50">类型</th>
+                                                <th width="80">长度/限制</th>
+                                                <th width="180">说明</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Stata</td>
+                                                    <td>int</td>
+                                                    <td>--</td>
+                                                    <td>状态码-><b>【右侧备注】</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Message</td>
+                                                    <td>string</td>
+                                                    <td>--</td>
+                                                    <td>返回描述文字</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data</td>
+                                                    <td>Object</td>
+                                                    <td>--</td>
+                                                    <td>返回数据对象</td>
+                                                </tr>
+                                                <tr class="data-remark">
+                                                    <td colspan="4"><b>Data数据说明</b></td>
+                                                </tr>
+                                                <tr>
+                                            <td>Name</td>
+                                            <td>string</td>
+                                            <td>(必填)</td>
+                                            <td>名称</td>
+                                        </tr><tr>
+                                            <td>FiledType</td>
+                                            <td>string</td>
+                                            <td></td>
+                                            <td>类型</td>
+                                        </tr><tr>
+                                            <td>IsWrite</td>
+                                            <td>int</td>
+                                            <td></td>
+                                            <td>是否必填</td>
+                                        </tr><tr>
+                                            <td>Remark</td>
+                                            <td>string</td>
+                                            <td></td>
+                                            <td>备注</td>
+                                        </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/jquery.json-viewer.js?v=1.0.0"></script>
+    <script src="js/plugins/layer/layer.js"></script>
+    <style>
+        s,
+        em {
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        .BackSuccess ul li {
+            list-style: none;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            var json = $(".BackSuccess").html();
+            $(".BackSuccess").jsonViewer(eval('(' + json + ')'), {
+                withQuotes: true,
+            });
+            $("#request_mn").click(function () {
+                var methods = $(".Methods").html();
+                var methodsVal = 0;
+                if (methods == "Get")
+                    methodsVal = 1;
+                else if (methods == "Post")
+                    methodsVal = 2;
+                $("#param_div", parent.document).html(GetParamHtml());
+                $(".request_example", parent.document).toggle(800);
+                $("#slt_Methods", parent.document).val(methodsVal);
+                $("#txt_ApiUrl", parent.document).text($(".ApiUrl").html());
+                $("#result_div").html("");
+            })
+
+            //window.addEventListener("mousemove", function (evt) {
+            //    console.log(evt.clientX + ":" + evt.clientY);
+            //}, false);
+        })
+
+
+        function GetParamHtml() {
+            var html = "";
+            $(".ParamDataList").find("tr").each(function () {
+                var remark = $(this).find("td").eq(3).html();
+                var idStr = $(this).find("td").eq(0).html();
+                var id = idStr.replace('<font>*</font>', '');
+                html += '<b>' + idStr + '：</b><input type="text" id="' + id + '" name="' + id + '"  placeholder="' + remark + '" /><br>';
+            })
+            return html;
+        }
+
+        function CreateFile(url) {
+            var arr = url.split('/');
+            if (arr.length == 3)
+                url = arr[1] + "_" + arr[2];
+            else if (arr.length == 4)
+                url = arr[2] + "_" + arr[3];
+            url = url + ".html";
+            layer.confirm("是否重新生成当前文档!", { btn: ["是", "否"], title: "系统提示：" }, function () {
+                window.open("/Home/index2?Path=" + url);
+                layer.closeAll();
+            })
+        }
+    </script>
+</body>
+
+</html>

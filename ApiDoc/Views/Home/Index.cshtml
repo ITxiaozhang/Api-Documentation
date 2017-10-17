@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Index";
+    /// <summary>
+    /// 作者：zc【2017-10-16】
+    /// 联系QQ:947623232【联系请备注:ApiDoc】
+    /// </summary>
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiDoc-接口文档快速一键生成</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/ApiDoc/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/ApiDoc/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/ApiDoc/css/animate.min.css" rel="stylesheet">
+    <link href="/ApiDoc/css/self_css.css" rel="stylesheet">
+    <link href="/ApiDoc/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <base target="_blank">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+
+        <div class="panel panel-default status_code" style="position: fixed; top: 30%; right: 0px; width: 180px; z-index: 999;">
+            <div class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <h5 class="panel-title">
+                        <a href="javascript:void(0);">【快速导航】</a>
+                    </h5>
+                    <br />
+                    <a href="/ApiDoc" class="btn btn-block  btn-success" target="_blank">查看Api文档</a>
+                    <a href="/Home/index2" class="btn btn-block btn-success" target="_blank">更新所有文档</a>
+                    <a class="btn btn-block  btn-success" onclick="layer.alert('<b>947623232</b>',{title:'作者联系方式:  '})">QQ：947623232</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="ibox float-e-margins">
+
+                    <div class="ibox-content">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">使用步骤：</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in ibox-content">
+                                    <ol>
+                                        <li>运行项目-默认访问/Home/Index页面,将自动生成测试的4个例子</li>
+                                        <li>通过页面【模拟请求】测试接口,【重新生成文件】单个更新接口文档</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">文件结构说明：</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in">
+                                    <img src="/Images/文件结构.png" />
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">页面功能示例：</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in ibox-content">
+                                    <div>
+                                        <h3>项目页面预览图:</h3>
+                                        <img src="~/Images/全图--.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a href="javascript:void(0);">其他说明：</a>
+                                    </h5>
+                                </div>
+                                <div class="panel-collapse collapse in ibox-content">
+                                    <div>该项目更多说明可查看CAPI.cs文件中备注,或联系作者<a href="javascript:void(0);">QQ：947623232</a>,项目存在很多不完善地方,但在提高编写文档效率上确实提高了很多,如果有任何意见或者建议可联系作者,来完善和解答你们问题。</div>
+                                    <div style="color: red;">注：改项目配置后,可通过配置内容,完成webapi文档的【全自动生成】,以及一键【更新所有文档】,支持【方法名】来搜索！</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    </style>
+    <script src="/ApiDoc/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/ApiDoc/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="/ApiDoc/js/content.min.js?v=1.0.0"></script>
+    <script src="/ApiDoc/js/jquery.json-viewer.js?v=1.0.0"></script>
+    <script src="/ApiDoc/js/plugins/layer/layer.js"></script>
+    <style>
+        s,
+        em {
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        .BackSuccess ul li {
+            list-style: none;
+        }
+
+        .ibox-content img {
+            max-width: 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(".bounceInUp").remove();
+        })
+    </script>
+</body>
+
+</html>
